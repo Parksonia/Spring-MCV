@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kopo.mapper.Mapper">
+
+	<!-- create -->
+	<!-- Sunglasses -->
+
+	<!--  id생성 주의사항 mapperpackage 이름과 다르게 해야함 
+	resultType=> select 구문에만 존재
+	-->
+	
+	<select id="getAll" resultType="com.kopo.domain.Sunglass">  <!-- 데이터 반환 타입 : list로 반환(전체를 반환 받기 떄문) : Mapper 인터페이스에서 리스트로 객체 생성해야함 -->
+		select * from sunglass order by id
+	</select>
+
+	<insert id="insertNew" parameterType="com.kopo.daomain.Sunglass">
+		insert into sunglass(id,name,price,description,stock,gender,color,imgPath) values(id_seq.NEXTVAL,#{Sunglass.name},#{Sunglass.price},#{Sunglass.description},#{Sunglass.stock},#{Sunglass.gender},#{Sunglass.color},#{Sunglass.imgPath})
+	</insert>
+
+
+
+
+
+
+
+
+</mapper>	
