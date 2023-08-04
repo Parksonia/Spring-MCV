@@ -54,7 +54,7 @@
 	
 	<!-- add form -->
 	
-	<form:form modelAttribute ="NewSunglass" method="post" enctype="multipart/form-data" action="./add?${_csrf.parameterName}=${_csrf.token}"  class="bg0 p-t-75 p-b-85">
+	<form:form modelAttribute ="NewSunglass" method="post" enctype="multipart/form-data" action="./add?${_csrf.parameterName}=${_csrf.token}.jpg" class="bg0 p-t-75 p-b-85">
 		<fieldset>
 		<div class="container">
 			<div class="row">
@@ -200,6 +200,7 @@
 							</div>
 						</div>
 						<input class="flex-c-m stext-101 cl2  size-116 bg8 bor14 hov-btn3 p-lr-15 trans-04 pointer" type="submit" value="Submit"></input>
+						<input 
 				</div><!-- add item div end -->
 			
 			

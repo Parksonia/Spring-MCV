@@ -100,7 +100,7 @@ public class SunglassController {
 	
 	//대표님 방법 
 	@PostMapping("/admin/add")
-	public String submitAddNewBook(@ModelAttribute("NewBook") Sunglass sunglass) {
+	public String submitAddNewBook(@ModelAttribute("NewSunglass") Sunglass sunglass) {
 		MultipartFile sunglassImg = sunglass.getImgFile();
 		UUID uuid = UUID.randomUUID();
 		String saveName = sunglassImg.getOriginalFilename().replaceAll(" ","")+uuid.toString();
